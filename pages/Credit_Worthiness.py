@@ -137,3 +137,7 @@ if st.button("Predict Credit Worthiness"):
     st.success(f"Predicted Credit Worthiness: {tranformed}")
 
     st.info("Model prediction have appeared successfully")
+
+
+
+
