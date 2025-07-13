@@ -19,11 +19,11 @@ col1, col2, col3 = st.columns(3)
 
 # Percentage Inputs (0 to 1)
 with col1:
-    pct_tl_open_l6m = st.slider("% TL Open in Last 6 Months", 0.0, 1.0, 0.5)
+    pct_tl_open_l6m = st.slider("% TL Open in Last 6 Months", 0.0, 1.0, 0.5,help="TL = Loan Accounts")
     pct_tl_closed_l6m = st.slider("% TL Closed in Last 6 Months", 0.0, 1.0, 0.5)
     pct_tl_open_l12m = st.slider("% TL Open in Last 12 Months", 0.0, 1.0, 0.5)
     pct_tl_closed_l12m = st.slider("% TL Closed in Last 12 Months", 0.0, 1.0, 0.5)
-    cc_utilization = st.slider("Credit Card Utilization", 0.0, 1.0, 0.5)
+    cc_utilization = st.slider("Credit Card Utilization in %", 0.0, 1.0, 0.5)
 
 with col2:
     tot_tl_closed_l12m = st.number_input("Total TL Closed in Last 12 Months", 0)
@@ -136,7 +136,7 @@ if st.button("Predict Credit Worthiness"):
     tranformed = encoder.inverse_transform(prediction)
     st.success(f"Predicted Credit Worthiness: {tranformed}")
 
-    st.info("Model prediction have appeared successfully")
+    st.info("Thanks for using the model.!!")
 
 
 
